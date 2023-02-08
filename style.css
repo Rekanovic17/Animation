@@ -1,0 +1,121 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+.naslov {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050210;
+}
+
+p {
+    color: #050210;
+    margin: 0;
+}
+
+p::selection {
+    color: red;
+    background-color: aqua;
+}
+
+.root {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050210;
+}
+
+.sjena {
+    height: 310px;
+    width: 310px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(30px);
+    animation-name: animacija;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.krug {
+
+    height: 280px;
+    width: 280px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation-name: animacija;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.krug-1 {
+    contain: krug-2;
+    height: 230px;
+    width: 230px;
+    background: #050210;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.krug-2 {
+
+    height: 50px;
+    width: 50px;
+    background: #13073b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: animacija-2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animacija {
+    from {
+        transform: rotatez(0deg);
+    }
+
+    to {
+        transform: rotatez(360deg);
+    }
+}
+
+@keyframes animacija-2 {
+    form {
+        height: 50px;
+        width: 50px;
+        opacity: 1;
+    }
+
+    to {
+        height: 230px;
+        width: 230px;
+        opacity: 0.5;
+    }
+}
